@@ -1,0 +1,46 @@
+@charset 'UTF-8';
+
+/* Using The 7-1 Pattern */
+
+// 1. Abstracts
+@import
+  'abstracts/functions',
+  'abstracts/variables',
+  'abstracts/mixins';
+ 
+// 7. Vendors
+@import
+  'vendors/custom',
+  'vendors/normalize',
+  'vendors/slick';
+
+// 2. Base
+@import
+  'base/animations',
+  'base/base',
+  'base/typography',
+  'base/utilities';
+
+// 3. Components
+@import
+  'components/component';
+
+// 4. Layout
+@import
+  'layout/navigation',
+  'layout/objects',
+  'layout/sections';
+
+// 5. Page
+@import
+  'pages/homepage';
+
+// 6. Themes
+@import
+  'themes/default';
+
+// Fixes
+@import 'fixes';
+@import 'shame';
+
+

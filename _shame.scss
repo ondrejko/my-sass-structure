@@ -1,0 +1,9 @@
+// =========================================================================
+// All ugly stuff
+// =========================================================================
+
+// If you have to make ugly code, because of some exception, put it here!
+
+body *[class^="col"] > .foo.foo2.foo3.foo4.foo5 {
+  color: red!important;
+}
