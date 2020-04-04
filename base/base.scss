@@ -1,0 +1,93 @@
+// =========================================================================
+// Base rules for HTML elements
+// =========================================================================
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::selection {
+  color: $brand-color;
+}
+::-moz-selection {
+  color: $brand-color;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: 'Open Sans', sans-serif;
+}
+
+html {
+  font-size: 16px; // This defines what 1rem is
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  font-family: 'Open Sans',
+  sans-serif;
+  background: #fff;
+  height: 100%;
+}
+
+html, body {
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: $black;
+  font-weight: 500;
+}
+
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  line-height: 1.7;
+  margin-bottom:1em;
+  font-size: 1rem;
+  font-weight: 400;
+  padding-top: 0;
+  margin-top: 0;
+  text-align: center;
+
+  @include respond(md) {
+    font-size: 1.125rem;
+    text-align: left;
+  }
+}
+
+b, strong {
+  font-weight: $fw-bold;
+}
+
+// Hide arrows for input
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+// Radio and checkbox buttons
+[type=checkbox], [type=radio] {
+      margin: 0 6px 0 0;
+}

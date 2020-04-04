@@ -1,0 +1,59 @@
+// =========================================================================
+// Animations
+// =========================================================================
+
+
+/* slider animation */ 
+
+@keyframes slide-from-right {
+  from {
+    right: -500px;
+  }
+
+  to {
+    right: 0;
+  }
+}
+
+@keyframes slide-from-left {
+  from {
+    left: -500px;
+  }
+  
+  to {
+    left: 0;
+  }
+}
+
+
+/* FADE IN */
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* FADE OUT */
+@keyframes fade-in-out {
+  0% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

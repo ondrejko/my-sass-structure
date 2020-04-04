@@ -1,0 +1,51 @@
+// =========================================================================
+// Foo.scss
+// =========================================================================
+
+/* Component structure: 
+
+  .Foo
+  .Foo__element
+  .Foo--modifier
+*/
+
+// Component's local variables
+//--------------------------------------------------------------------------
+$foo-color: #000;
+$foo-bg-color: #fff;
+
+// Block
+//--------------------------------------------------------------------------
+.Foo {
+  color: $foo-color;
+  background: $foo-bg-color;
+}
+
+// Element: __element
+//--------------------------------------------------------------------------
+.Foo__element {
+  color: $foo-color;
+  background: $foo-bg-color;
+  @include respond(sm) {
+    color: red;
+  }
+  @include respond(md) {
+    color: green;
+  }
+  @include respond(lg) {
+    color: blue;
+  }
+  @include respond(xl) {
+    color: yellow;
+  }
+  @include respond(xxl) {
+    color: cyan;
+  }
+}
+
+// Modifier: --modifier
+//--------------------------------------------------------------------------
+.Foo--modifier {
+  color: $foo-bg-color;
+  background: $foo-color;
+}

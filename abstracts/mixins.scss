@@ -1,0 +1,70 @@
+// =========================================================================
+// Sass mixins (with media query manager)
+// =========================================================================
+
+
+// Translation prefix
+@mixin transition($transition...) {
+  -moz-transition:    $transition;
+  -o-transition:      $transition;
+  -webkit-transition: $transition;
+  transition:         $transition;
+}
+
+/// Helper to clear inner floats
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+
+/// Mixin printing a linear-gradient
+@mixin linear-gradient($direction, $color-stops...) {
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
+}
+
+
+/*
+MEDIA QUERY MANAGER
+
+@Mobile first methods
+
+0px - 600px        Phone
+600px - 900px      Tablet portrait
+900px - 1200px     Tablet landscape
+1200px - 1800px    Desktop (Normal styles apply)
+1800px +           Big desktop
+ 
+$breakpoint arguement choices:
+- phone: min-width: 0em 
+- tablet-port: min-width: 37.5em (>600px)
+- tablet-land: min-width: 56.25em (>900px)
+- desktop: min-width: 75em (>1200px)
+- big desktop: min-width: 112.5em (>1800px)
+*/
+
+// Mobile first breakpoints - Bootstrap 4
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == xs {
+    @media (min-width: 0em) { @content; } // 0px
+  }
+  @if $breakpoint == sm {
+    @media (min-width: 36em) { @content; } // 576px 
+  }
+  @if $breakpoint == md {
+    @media (min-width: 48em) { @content; } //768px
+  }
+  @if $breakpoint == lg {
+    @media (min-width: 62em) { @content; } //992px
+  }
+  @if $breakpoint == xl {
+    @media (min-width: 85.4375em) { @content; } // 1365px +
+  }
+}
+

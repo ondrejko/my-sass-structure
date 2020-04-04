@@ -1,0 +1,44 @@
+// =========================================================================
+// Typography
+// =========================================================================
+
+$fw-light: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+$fw-black: 900;
+
+
+
+h1 {
+  font-size: 4rem;
+  @include respond(sm) {
+    font-size: 5rem;
+  }
+  @include respond(md) {
+    font-size: 6rem;
+  }
+  @include respond(lg) {
+    font-size: 7rem;
+  }
+  @include respond(xl) {
+    font-size: 8rem;
+  }
+  @include respond(xxl) {
+    font-size: 9rem;
+  }
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+
+
