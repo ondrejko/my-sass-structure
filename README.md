@@ -1,4 +1,4 @@
-# My project structure for websites for Sass on small projects
+# My project structure for small projects (Sass, BEM, Grunt, 7-1 Pattern)
 
 CSS structure based on [Sass 7-1 pattern](http://sass-guidelin.es/#the-7-1-pattern), [BEM](http://getbem.com/naming/), Mobile first and some hack files.
 
